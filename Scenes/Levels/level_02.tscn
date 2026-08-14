@@ -4,10 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dkc8rdq3j7ppf" path="res://Assets/BG/mountainA.png" id="2_2e1f7"]
 [ext_resource type="PackedScene" uid="uid://towe6jtciome" path="res://Scenes/Levels/level_03.tscn" id="2_q8k1b"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhitk"]
+size = Vector2(1210, 20)
+
 [node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_3fxa7")]
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
-position = Vector2(1118, 400)
+position = Vector2(1065, 334)
 next_scene = ExtResource("2_q8k1b")
 
 [node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
@@ -20,6 +23,12 @@ metadata/_edit_lock_ = true
 position = Vector2(270.25, 217.24998)
 scale = Vector2(2.1334267, 2.4474432)
 texture = ExtResource("2_2e1f7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1184612706]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" index="0" unique_id=1479566011]
+position = Vector2(554, 413)
+shape = SubResource("RectangleShape2D_hhitk")
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 text = "Level 2"

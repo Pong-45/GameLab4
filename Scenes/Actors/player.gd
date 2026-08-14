@@ -48,6 +48,7 @@ func _ready() -> void:
 func _physics_process(_delta):
 	is_grounded = is_on_floor()
 	movement()
+	_handle_enemy_contact()
 
 func _process(_delta):
 	player_animations()
@@ -157,22 +158,32 @@ func damage_tween():
 		tween.tween_property(player_node , "modulate", Color.WHITE, 0.1)
 	await tween.finished
 	can_damage = true
+
+func _handle_enemy_contact() -> void:
+	if !can_damage:
+		return
+	var bodies = $Collision.get_overlapping_bodies()
+	for body in bodies:
+		if body != null:
+			_on_collision_body_entered(body)
+			
+func _apply_enemy_damage(body) -> void:
+	var dx = body.position.x - position.x
+	velocity.y = -400
+	if dx > 0:
+		velocity.x = -300
+	else:
+		velocity.x = 300
+	damage_tween()
+	hit_enemy.emit()
 # --------- SIGNALS ---------- #
 
 # Reset the player's position to the current level spawn point if collided with any trap
 func _on_collision_body_entered(body):
 	if body.is_in_group("Traps"):
 		hit_trap.emit()
-	if !can_damage : return
-	if body.is_in_group("Enemy"):
-		var dx = body.position.x - position.x
-		velocity.y = -400
-		if dx > 0:
-			velocity.x = -300
-		else:
-			velocity.x = 300					
-		damage_tween()
-		hit_enemy.emit()
+	if body.is_in_group("Enemy") and can_damage:
+		_apply_enemy_damage(body)
 
 func handle_shooting():
 	if Input.is_action_just_pressed("Shoot") and movement_enabled and shoot_cooldown_timer <= 0:

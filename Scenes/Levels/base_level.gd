@@ -11,7 +11,6 @@ func _ready() -> void:
 	await get_tree().create_timer(3).timeout
 	$UserInterface/Label.queue_free()
 
-
 func _on_player_hit_enemy() -> void:
 	GameManager.damage(5)	
 

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://xxxb1f1q3fhm"]
+
+[ext_resource type="Script" uid="uid://lfkiq2j22hff" path="res://Scenes/Prefabs/bullet.gd" id="1_17tr2"]
+[ext_resource type="Texture2D" uid="uid://dsqhpet4dfpn8" path="res://Assets/Spritesheet/bullet.png" id="2_r5pcr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pkqe3"]
+friction = 0.5
+bounce = 0.8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mqoqv"]
+radius = 6.708204
+
+[node name="Bullet" type="RigidBody2D" unique_id=737966296 groups=["Bullet_Enemy"]]
+collision_layer = 4
+physics_material_override = SubResource("PhysicsMaterial_pkqe3")
+script = ExtResource("1_17tr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=441138516]
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_mqoqv")
+
+[node name="Bullet" type="Sprite2D" parent="." unique_id=308939572]
+modulate = Color(0.24705882, 1, 0.16862746, 1)
+position = Vector2(0, -1.0000005)
+scale = Vector2(0.14684202, 0.16964285)
+texture = ExtResource("2_r5pcr")

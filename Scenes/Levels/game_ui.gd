@@ -6,12 +6,14 @@ extends CanvasLayer
 
 func _process(_delta):
 	# Set the score label text to the score variable in game maanger script
-	score_label.text = "Score: %d" % GameManager.score
-	hp_bar.value = GameManager.hp
+	score_label.text = "Score: %d" % GameManager.player_stats.data_get("score")
+	hp_bar.value = GameManager.get_stat("hp")
+	hp_bar.max_value = GameManager.get_stat("hp_max",100)
+	
 	$GameUI/TopBar/btnSound/on.visible   = GameManager.sfx_on
 	$GameUI/TopBar/btnSound/mute.visible = !GameManager.sfx_on
 	$GameUI/TopBar/btnMusic/mute.visible = !GameManager.music_on
-	$GameUI/TopBar/LifeRect.size.x = 48 * GameManager.life
+	$GameUI/TopBar/LifeRect.size.x = 48 * GameManager.get_stat("life",4)
 
 func alert(text):
 	alert_label.text = text

@@ -4,8 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://wg4mya74ni6n" path="res://Assets/Sound/FX/explosion.wav" id="2_5n1qu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21vrd"]
-radius = 17.0
-height = 44.0
+radius = 15.0
+height = 36.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tyn28"]
 radius = 19.0
@@ -24,11 +24,11 @@ bg_color = Color(0.16862746, 0.54901963, 0.23921569, 0.60784316)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=600502477 groups=["Enemy"]]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 3
 script = ExtResource("1_7cwx2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587424215]
-position = Vector2(0, -22)
+position = Vector2(0, -17)
 shape = SubResource("CapsuleShape2D_21vrd")
 
 [node name="HitArea" type="Area2D" parent="." unique_id=1115411835 groups=["Enemy"]]
@@ -100,9 +100,14 @@ color_ramp = SubResource("Gradient_wxnld")
 
 [node name="Ray" type="Node2D" parent="Sprite" unique_id=1415425330]
 
-[node name="playerRay" type="RayCast2D" parent="Sprite/Ray" unique_id=1255579585]
+[node name="playerRayBack" type="RayCast2D" parent="Sprite/Ray" unique_id=1255579585]
 position = Vector2(0, -22)
 target_position = Vector2(139, 0)
+collision_mask = 2
+
+[node name="playerRayFront" type="RayCast2D" parent="Sprite/Ray" unique_id=1480801001]
+position = Vector2(0, -22)
+target_position = Vector2(-179, 0)
 collision_mask = 2
 
 [node name="wallRay" type="RayCast2D" parent="Sprite/Ray" unique_id=807141594]
@@ -119,12 +124,26 @@ volume_db = -3.0
 bus = &"sfx"
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=1256446627]
-offset_left = -27.0
-offset_top = -97.0
-offset_right = 24.0
-offset_bottom = -79.0
+offset_left = -25.0
+offset_top = -100.0
+offset_right = 27.0
+offset_bottom = -82.0
 theme_override_font_sizes/font_size = 10
 theme_override_styles/fill = SubResource("StyleBoxFlat_7cwx2")
 value = 100.0
+
+[node name="Label" type="Label" parent="." unique_id=1552956948]
+custom_minimum_size = Vector2(80, 24)
+offset_left = -43.0
+offset_top = -84.0
+offset_right = 43.0
+offset_bottom = -54.0
+theme_override_colors/font_color = Color(0.9098039, 0.3019608, 0.3137255, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 8
+text = "สัตว์ประหลาด"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

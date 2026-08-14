@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b6tvaxw54wsq0"]
 
 [ext_resource type="Script" uid="uid://tkynu7pd01lh" path="res://Scenes/Levels/menu.gd" id="1_hq2ph"]
+[ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_7pnm7"]
+[ext_resource type="Texture2D" uid="uid://cdgognnt83s33" path="res://icon.svg" id="3_7pnm7"]
 
 [node name="Node2D" type="Node2D" unique_id=827773846]
 script = ExtResource("1_hq2ph")
@@ -8,7 +10,8 @@ script = ExtResource("1_hq2ph")
 [node name="UI" type="Control" parent="." unique_id=2061607031]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1153.0
+offset_top = 6.0
+offset_right = 1141.0
 offset_bottom = 524.0
 
 [node name="btnStart" type="Button" parent="UI" unique_id=843125025]
@@ -59,6 +62,16 @@ offset_right = 78.5
 offset_bottom = 435.0
 grow_horizontal = 2
 text = "Credit"
+
+[node name="CpkkuDark" type="Sprite2D" parent="." unique_id=2047758235]
+position = Vector2(1006, 611)
+scale = Vector2(0.61328125, 0.6486486)
+texture = ExtResource("2_7pnm7")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1100858680]
+position = Vector2(1116, 609)
+scale = Vector2(0.35449257, 0.37304696)
+texture = ExtResource("3_7pnm7")
 
 [connection signal="pressed" from="UI/btnStart" to="." method="_on_btn_start_pressed"]
 [connection signal="pressed" from="UI/btnContinue" to="." method="_on_btn_continue_pressed"]

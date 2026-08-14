@@ -19,11 +19,12 @@ offsets = PackedFloat32Array(0.25, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvbjh"]
-size = Vector2(43.99997, 123.99858)
+size = Vector2(46.00122, 123.99858)
 
 [node name="Player" type="CharacterBody2D" unique_id=2106209264 groups=["Player"]]
 rotation = 0.00042652956
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_mqoqv")
 bullet_scene = ExtResource("2_4fuvf")
 
@@ -74,8 +75,8 @@ position = Vector2(2.08165e-12, -48)
 collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision" unique_id=69876643]
-position = Vector2(-2.0268738, -8.998505)
-scale = Vector2(1.0000011, 1.0000011)
+position = Vector2(-0.024096556, -8.998505)
+scale = Vector2(1.0000013, 1.0000013)
 shape = SubResource("RectangleShape2D_tvbjh")
 
 [node name="LightW" type="Sprite2D" parent="." unique_id=900370792]
@@ -99,5 +100,3 @@ editor_draw_drag_margin = true
 
 [node name="BulletMarker" type="Marker2D" parent="." unique_id=511055809]
 position = Vector2(28.983788, -38.012367)
-
-[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 func _on_btn_start_pressed() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	GameManager.restart()
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_01.tscn")
 
 
 func _on_btn_option_pressed() -> void:

@@ -70,9 +70,11 @@ animations = [{
 
 [node name="Enemy" unique_id=600502477 instance=ExtResource("1_a4af2")]
 script = ExtResource("2_tyn28")
+state = 1
+label = "MushRoomer"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
-position = Vector2(0, -33)
+position = Vector2(0, -27)
 scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D2" parent="HitArea" parent_id_path=PackedInt32Array(1115411835) index="0" unique_id=2008793250]
@@ -84,3 +86,18 @@ position = Vector2(0, -42)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_l7ctk")
 animation = &"mushroom"
+frame = 3
+frame_progress = 0.5231245
+
+[node name="wallRay" parent="Sprite/Ray" parent_id_path=PackedInt32Array(1415425330) index="2" unique_id=807141594]
+target_position = Vector2(-37, 0)
+
+[node name="ProgressBar" parent="." index="6" unique_id=1256446627]
+offset_top = -105.0
+offset_bottom = -87.0
+
+[node name="Label" parent="." index="7" unique_id=1552956948]
+offset_top = -94.0
+offset_bottom = -64.0
+
+[connection signal="state_changed" from="." to="." method="_on_state_changed"]

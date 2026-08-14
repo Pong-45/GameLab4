@@ -70,16 +70,23 @@ animations = [{
 
 [node name="Enemy" unique_id=600502477 instance=ExtResource("1_b7voo")]
 script = ExtResource("2_a8voy")
+speed = 50.0
+hp = 80
+hp_max = 100
+atk = 5
+state = 1
+type = 3
+label = "Slimmy"
+rest_recovery_ratio = 1.0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=587424215]
-position = Vector2(0, -17)
 scale = Vector2(1, 0.8)
 
 [node name="CollisionShape2D2" parent="HitArea" parent_id_path=PackedInt32Array(1115411835) index="0" unique_id=2008793250]
 position = Vector2(0, -17)
 scale = Vector2(1, 0.8)
 
-[node name="Sprite" parent="." index="3" unique_id=1445111960]
+[node name="Sprite" parent="." index="4" unique_id=1445111960]
 position = Vector2(0, -1)
 
 [node name="AnimateSprite" type="AnimatedSprite2D" parent="Sprite" index="0" unique_id=87960724]
@@ -87,6 +94,11 @@ position = Vector2(0, -37)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_l7ctk")
 animation = &"slim"
+frame = 6
+frame_progress = 0.26297572
 
-[node name="Ray" parent="Sprite" index="1" unique_id=1415425330]
-visible = false
+[node name="playerRayBack" parent="Sprite/Ray" parent_id_path=PackedInt32Array(1415425330) index="0" unique_id=1255579585]
+target_position = Vector2(114, 1)
+
+[node name="playerRayFront" parent="Sprite/Ray" parent_id_path=PackedInt32Array(1415425330) index="1" unique_id=1480801001]
+target_position = Vector2(-95, -1)

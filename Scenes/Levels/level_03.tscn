@@ -3,10 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_8r7r2"]
 [ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://Scenes/Levels/game_win.tscn" id="2_dcfph"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcfph"]
+size = Vector2(1210, 20)
+
 [node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_8r7r2")]
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1061, 349)
 next_scene = ExtResource("2_dcfph")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1715677896]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" index="0" unique_id=451873863]
+position = Vector2(554, 413)
+shape = SubResource("RectangleShape2D_dcfph")
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 text = "Level 3"

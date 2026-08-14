@@ -15,31 +15,44 @@ var player :Player = null
 var current_level : String = "res://Scenes/Levels/level_01.tscn"
 var save_path := "user://game.save"
 var save_player_position = Vector2.ZERO
+var player_stats = Stat.new()
 
+func _ready() -> void:
+	restart()
+	
+func get_stat(key:String,default=0):
+	return player_stats.data_get(key,default)
+	
 # Adds 1 to score variable
 func add_score(v=1):
-	score += v
+	player_stats.data_add("score",v)
 
 # Loads next level
 func load_next_level(next_scene : PackedScene):
 	get_tree().change_scene_to_packed(next_scene)
 
+func enemy_died(entity : Enemy):
+	player_stats.data_add("killed_enemy")
+	player_stats.data_add("killed_"+entity.label)	
+
 func restart():
-	score = 0
-	hp = 100
-	life = 4
+	player_stats.data_set("hp",100)
+	player_stats.data_set("hp_max",100)
+	player_stats.data_set("life",4)
+	player_stats.data_set("life_max",5)
+	player_stats.data_set("score",0)
+	player_stats.data_set("coins",0)
+	player_stats.data_set("killed_enemy",0)
 	save_player_position = Vector2.ZERO
-	get_tree().change_scene_to_file("res://Scenes/Levels/level_01.tscn")
 
 
 func damage(val=1):
-	hp = hp - val
+	var hp = player_stats.data_add("hp",-val)
 	if hp <=0 :
 		death()
+
 func add_hp(val=1):
-	hp = hp + val
-	if hp >max_hp:
-		hp = max_hp
+	player_stats.data_add("hp",val)
 
 func update_option():
 	var music_bus = AudioServer.get_bus_index("music")
@@ -48,15 +61,13 @@ func update_option():
 	AudioServer.set_bus_mute(music_bus,!music_on)
 	
 func add_life():
-	if life < max_life:
-		life += 1
+	player_stats.data_add("life",1)
 
 func death():
 	if player != null:
 		await player.death_tween()
-	life -= 1
-	if life <= 0:
-		get_tree().change_scene_to_file("res://Scenes/Levels/game_over.tscn")	
+	if player_stats.data_add("life",-1) <= 0:
+		get_tree().change_scene_to_file("res://Scenes/Levels/game_over.tscn")
 
 func save_option():
 	var file = FileAccess.open("user://option.json", FileAccess.WRITE)
@@ -87,8 +98,7 @@ func save_game():
 		var payload: Dictionary = {
 			"current_level" : current_level,
 			"player" : [pos.x, pos.y],
-			"score": score,
-			"life" : life
+			"player_stats" : player_stats.data
 		}
 		var json_text = JSON.stringify(payload, "  ")
 		file.store_pascal_string(json_text)
@@ -104,10 +114,10 @@ func load_game():
 		var data = JSON.parse_string(text)        		
 		file.close()
 		current_level = data.get("current_level", current_level)
-		score = data.get("score", score)
-		life = data.get("life", 4)
+		player_stats.data = data.get("player_stats", {})
 		var pos = data.get("player",[0,0])
 		save_player_position = Vector2(pos[0],pos[1])
 		get_tree().change_scene_to_file(current_level)
 	else:
 		restart()	
+		get_tree().change_scene_to_file("res://Scenes/Levels/level_01.tscn")

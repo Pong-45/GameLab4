@@ -37,8 +37,9 @@ AudioManager="*res://Scenes/Managers/audio_manager.tscn"
 
 [display]
 
-window/size/mode=3
+window/size/viewport_width=1200
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -54,6 +55,13 @@ Traps=""
 Enemy=""
 Player=""
 Bullet=""
+Bullet_Enemy=""
+
+[gui]
+
+theme/default_font_antialiasing=0
+theme/custom="uid://d3eng5cvycmjf"
+theme/custom_font="uid://b3ivysmhcn84h"
 
 [input]
 
