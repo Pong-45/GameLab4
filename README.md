@@ -26,7 +26,7 @@
 
 ## 🕹️ ทดลองเล่นเกม
 
-- [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
+- [Game Preview](docs/Lab04.html)
 
 
 ## 👤 ผู้จัดทำ
