@@ -1,34 +1,1203 @@
-[gd_scene format=3 uid="uid://cppg5yoxwv0dy"]
+[gd_scene format=4]
 
-[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_3fxa7"]
-[ext_resource type="Texture2D" uid="uid://dkc8rdq3j7ppf" path="res://Assets/BG/mountainA.png" id="2_2e1f7"]
-[ext_resource type="PackedScene" uid="uid://towe6jtciome" path="res://Scenes/Levels/level_03.tscn" id="2_q8k1b"]
+[ext_resource type="Script" path="res://Scenes/Levels/swamp_level.gd" id="1_fcf4c"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/2 Background/Layers/1.png" id="2_b3xks"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/2 Background/Layers/2.png" id="3_1a54p"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/2 Background/Layers/3.png" id="4_243an"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/2 Background/Layers/4.png" id="5_lxqrp"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/2 Background/Layers/5.png" id="6_7ap1j"]
+[ext_resource type="Script" path="res://Scenes/Levels/swamp_motes.gd" id="7_fkjwr"]
+[ext_resource type="TileSet" path="res://Scenes/Prefabs/swamp_tileset.tres" id="8_n1w8o"]
+[ext_resource type="TileSet" path="res://Scenes/Prefabs/swamp_platform_tileset.tres" id="9_22e5y"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/swamp_pickup.gd" id="10_rjetw"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Willows/2.png" id="11_erfge"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Willows/3.png" id="12_fv7jd"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Willows/1.png" id="13_n1d1d"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/2.png" id="14_41iqh"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/4.png" id="15_7g31s"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/6.png" id="16_2x1gy"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/8.png" id="17_fvacs"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/10.png" id="18_fa44l"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/1.png" id="19_e8atg"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/3.png" id="20_rn7an"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/5.png" id="21_d553h"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/7.png" id="22_lxflx"]
+[ext_resource type="Texture2D" path="res://Assets/BG/2/craftpix-net-672461-free-swamp-game-tileset-pixel-art/3 Objects/Grass/9.png" id="23_8alx7"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/swamp_hazard.gd" id="24_15bgg"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/jump_board.gd" id="25_hprw8"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/moving_platform.gd" id="26_ei2s5"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/portal_gate.gd" id="27_heam3"]
+[ext_resource type="PackedScene" path="res://Scenes/Actors/monster_slim.tscn" id="28_0hoou"]
+[ext_resource type="PackedScene" path="res://Scenes/Actors/monster_mushroom.tscn" id="29_6krhw"]
+[ext_resource type="PackedScene" path="res://Scenes/Actors/player.tscn" id="30_rus1u"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/game_ui.tscn" id="31_d04u1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhitk"]
-size = Vector2(1210, 20)
+[node name="SwampLevel02" type="Node2D" unique_id=142836911]
+texture_filter = 1
+script = ExtResource("1_fcf4c")
+level_index = 2
+level_title = "Canopy Ascent"
+level_width = 7168.0
 
-[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_3fxa7")]
+[node name="Sky_001" type="CanvasLayer" parent="." unique_id=1528106767]
+layer = -20
 
-[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
-position = Vector2(1065, 334)
-next_scene = ExtResource("2_q8k1b")
+[node name="SkyColor_002" type="ColorRect" parent="Sky_001" unique_id=175466876]
+offset_right = 2000.0
+offset_bottom = 1200.0
+mouse_filter = 2
+color = Color(0.20392157, 0.29803923, 0.3137255, 1)
 
-[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
-metadata/_edit_lock_ = true
+[node name="ForestLayer_003" type="Parallax2D" parent="." unique_id=1199317295]
+z_index = -14
+scroll_scale = Vector2(0.13, 0.08)
+repeat_size = Vector2(1382.4, 0)
+repeat_times = 3
 
-[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
-metadata/_edit_lock_ = true
+[node name="Forest_004" type="Sprite2D" parent="ForestLayer_003" unique_id=798596391]
+modulate = Color(0.5647059, 0.73333335, 0.70980394, 1)
+position = Vector2(0, -220)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("2_b3xks")
+centered = false
 
-[node name="MountainA" type="Sprite2D" parent="Level/Background2" index="0" unique_id=1142107788]
-position = Vector2(270.25, 217.24998)
-scale = Vector2(2.1334267, 2.4474432)
-texture = ExtResource("2_2e1f7")
+[node name="ForestLayer_005" type="Parallax2D" parent="." unique_id=910435073]
+z_index = -13
+scroll_scale = Vector2(0.21, 0.08)
+repeat_size = Vector2(1382.4, 0)
+repeat_times = 3
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1184612706]
+[node name="Forest_006" type="Sprite2D" parent="ForestLayer_005" unique_id=1978673037]
+modulate = Color(0.5647059, 0.73333335, 0.70980394, 1)
+position = Vector2(0, -220)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("3_1a54p")
+centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" index="0" unique_id=1479566011]
-position = Vector2(554, 413)
-shape = SubResource("RectangleShape2D_hhitk")
+[node name="ForestLayer_007" type="Parallax2D" parent="." unique_id=523816437]
+z_index = -12
+scroll_scale = Vector2(0.29, 0.08)
+repeat_size = Vector2(1382.4, 0)
+repeat_times = 3
 
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
-text = "Level 2"
+[node name="Forest_008" type="Sprite2D" parent="ForestLayer_007" unique_id=621383555]
+modulate = Color(0.5647059, 0.73333335, 0.70980394, 1)
+position = Vector2(0, -220)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("4_243an")
+centered = false
+
+[node name="ForestLayer_009" type="Parallax2D" parent="." unique_id=1163153127]
+z_index = -11
+scroll_scale = Vector2(0.37, 0.08)
+repeat_size = Vector2(1382.4, 0)
+repeat_times = 3
+
+[node name="Forest_010" type="Sprite2D" parent="ForestLayer_009" unique_id=1193855049]
+modulate = Color(0.5647059, 0.73333335, 0.70980394, 1)
+position = Vector2(0, -220)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("5_lxqrp")
+centered = false
+
+[node name="ForestLayer_011" type="Parallax2D" parent="." unique_id=1833863685]
+z_index = -10
+scroll_scale = Vector2(0.45, 0.08)
+repeat_size = Vector2(1382.4, 0)
+repeat_times = 3
+
+[node name="Forest_012" type="Sprite2D" parent="ForestLayer_011" unique_id=997245192]
+modulate = Color(0.5647059, 0.73333335, 0.70980394, 1)
+position = Vector2(0, -220)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_7ap1j")
+centered = false
+
+[node name="Fireflies_013" type="Node2D" parent="." unique_id=2040988369]
+script = ExtResource("7_fkjwr")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=412609990]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAsAAAAAAAAAAAAAAAwACgAAAAAAAAAAAA0ACgAAAAAAAAAAAA4ACgAAAAAAAAAAAA8ACgAAAAAAAAAAABAAFAAAAAAAAAABAAsAAQAAAAAAAAABAAwACwAAAAAAAAABAA0ACwAAAAAAAAABAA4ACwAAAAAAAAABAA8ACwAAAAAAAAABABAAFQAAAAAAAAACAAsAAQAAAAAAAAACAAwACwAAAAAAAAACAA0ACwAAAAAAAAACAA4ACwAAAAAAAAACAA8ACwAAAAAAAAACABAAFQAAAAAAAAADAAsAAQAAAAAAAAADAAwACwAAAAAAAAADAA0ACwAAAAAAAAADAA4ACwAAAAAAAAADAA8ACwAAAAAAAAADABAAFQAAAAAAAAAEAAsAAQAAAAAAAAAEAAwACwAAAAAAAAAEAA0ACwAAAAAAAAAEAA4ACwAAAAAAAAAEAA8ACwAAAAAAAAAEABAAFQAAAAAAAAAFAAsAAQAAAAAAAAAFAAwACwAAAAAAAAAFAA0ACwAAAAAAAAAFAA4ACwAAAAAAAAAFAA8ACwAAAAAAAAAFABAAFQAAAAAAAAAGAAsAAQAAAAAAAAAGAAwACwAAAAAAAAAGAA0ACwAAAAAAAAAGAA4ACwAAAAAAAAAGAA8ACwAAAAAAAAAGABAAFQAAAAAAAAAHAAsAAQAAAAAAAAAHAAwACwAAAAAAAAAHAA0ACwAAAAAAAAAHAA4ACwAAAAAAAAAHAA8ACwAAAAAAAAAHABAAFQAAAAAAAAAIAAsAAQAAAAAAAAAIAAwACwAAAAAAAAAIAA0ACwAAAAAAAAAIAA4ACwAAAAAAAAAIAA8ACwAAAAAAAAAIABAAFQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwACwAAAAAAAAAJAA0ACwAAAAAAAAAJAA4ACwAAAAAAAAAJAA8ACwAAAAAAAAAJABAAFQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwACwAAAAAAAAAKAA0ACwAAAAAAAAAKAA4ACwAAAAAAAAAKAA8ACwAAAAAAAAAKABAAFQAAAAAAAAALAAsAAQAAAAAAAAALAAwACwAAAAAAAAALAA0ACwAAAAAAAAALAA4ACwAAAAAAAAALAA8ACwAAAAAAAAALABAAFQAAAAAAAAAMAAsAAQAAAAAAAAAMAAwACwAAAAAAAAAMAA0ACwAAAAAAAAAMAA4ACwAAAAAAAAAMAA8ACwAAAAAAAAAMABAAFQAAAAAAAAANAAsAAQAAAAAAAAANAAwACwAAAAAAAAANAA0ACwAAAAAAAAANAA4ACwAAAAAAAAANAA8ACwAAAAAAAAANABAAFQAAAAAAAAAOAAsAAQAAAAAAAAAOAAwACwAAAAAAAAAOAA0ACwAAAAAAAAAOAA4ACwAAAAAAAAAOAA8ACwAAAAAAAAAOABAAFQAAAAAAAAAPAAsAAgAAAAAAAAAPAAwADAAAAAAAAAAPAA0ADAAAAAAAAAAPAA4ADAAAAAAAAAAPAA8ADAAAAAAAAAAPABAAFgAAAAAAAAATAAoAAAAAAAAAAAATAAsACgAAAAAAAAATAAwACgAAAAAAAAATAA0ACgAAAAAAAAATAA4ACgAAAAAAAAATAA8ACgAAAAAAAAATABAAFAAAAAAAAAAUAAoAAQAAAAAAAAAUAAsACwAAAAAAAAAUAAwACwAAAAAAAAAUAA0ACwAAAAAAAAAUAA4ACwAAAAAAAAAUAA8ACwAAAAAAAAAUABAAFQAAAAAAAAAVAAoAAQAAAAAAAAAVAAsACwAAAAAAAAAVAAwACwAAAAAAAAAVAA0ACwAAAAAAAAAVAA4ACwAAAAAAAAAVAA8ACwAAAAAAAAAVABAAFQAAAAAAAAAWAAoAAQAAAAAAAAAWAAsACwAAAAAAAAAWAAwACwAAAAAAAAAWAA0ACwAAAAAAAAAWAA4ACwAAAAAAAAAWAA8ACwAAAAAAAAAWABAAFQAAAAAAAAAXAAoAAQAAAAAAAAAXAAsACwAAAAAAAAAXAAwACwAAAAAAAAAXAA0ACwAAAAAAAAAXAA4ACwAAAAAAAAAXAA8ACwAAAAAAAAAXABAAFQAAAAAAAAAYAAoAAQAAAAAAAAAYAAsACwAAAAAAAAAYAAwACwAAAAAAAAAYAA0ACwAAAAAAAAAYAA4ACwAAAAAAAAAYAA8ACwAAAAAAAAAYABAAFQAAAAAAAAAZAAoAAQAAAAAAAAAZAAsACwAAAAAAAAAZAAwACwAAAAAAAAAZAA0ACwAAAAAAAAAZAA4ACwAAAAAAAAAZAA8ACwAAAAAAAAAZABAAFQAAAAAAAAAaAAoAAQAAAAAAAAAaAAsACwAAAAAAAAAaAAwACwAAAAAAAAAaAA0ACwAAAAAAAAAaAA4ACwAAAAAAAAAaAA8ACwAAAAAAAAAaABAAFQAAAAAAAAAbAAoAAQAAAAAAAAAbAAsACwAAAAAAAAAbAAwACwAAAAAAAAAbAA0ACwAAAAAAAAAbAA4ACwAAAAAAAAAbAA8ACwAAAAAAAAAbABAAFQAAAAAAAAAcAAoAAQAAAAAAAAAcAAsACwAAAAAAAAAcAAwACwAAAAAAAAAcAA0ACwAAAAAAAAAcAA4ACwAAAAAAAAAcAA8ACwAAAAAAAAAcABAAFQAAAAAAAAAdAAoAAQAAAAAAAAAdAAsACwAAAAAAAAAdAAwACwAAAAAAAAAdAA0ACwAAAAAAAAAdAA4ACwAAAAAAAAAdAA8ACwAAAAAAAAAdABAAFQAAAAAAAAAeAAoAAQAAAAAAAAAeAAsACwAAAAAAAAAeAAwACwAAAAAAAAAeAA0ACwAAAAAAAAAeAA4ACwAAAAAAAAAeAA8ACwAAAAAAAAAeABAAFQAAAAAAAAAfAAoAAQAAAAAAAAAfAAsACwAAAAAAAAAfAAwACwAAAAAAAAAfAA0ACwAAAAAAAAAfAA4ACwAAAAAAAAAfAA8ACwAAAAAAAAAfABAAFQAAAAAAAAAgAAoAAQAAAAAAAAAgAAsACwAAAAAAAAAgAAwACwAAAAAAAAAgAA0ACwAAAAAAAAAgAA4ACwAAAAAAAAAgAA8ACwAAAAAAAAAgABAAFQAAAAAAAAAhAAoAAQAAAAAAAAAhAAsACwAAAAAAAAAhAAwACwAAAAAAAAAhAA0ACwAAAAAAAAAhAA4ACwAAAAAAAAAhAA8ACwAAAAAAAAAhABAAFQAAAAAAAAAiAAoAAQAAAAAAAAAiAAsACwAAAAAAAAAiAAwACwAAAAAAAAAiAA0ACwAAAAAAAAAiAA4ACwAAAAAAAAAiAA8ACwAAAAAAAAAiABAAFQAAAAAAAAAjAAoAAgAAAAAAAAAjAAsADAAAAAAAAAAjAAwADAAAAAAAAAAjAA0ADAAAAAAAAAAjAA4ADAAAAAAAAAAjAA8ADAAAAAAAAAAjABAAFgAAAAAAAAAoAAkAAAAAAAAAAAAoAAoACgAAAAAAAAAoAAsACgAAAAAAAAAoAAwACgAAAAAAAAAoAA0ACgAAAAAAAAAoAA4ACgAAAAAAAAAoAA8ACgAAAAAAAAAoABAAFAAAAAAAAAApAAkAAQAAAAAAAAApAAoACwAAAAAAAAApAAsACwAAAAAAAAApAAwACwAAAAAAAAApAA0ACwAAAAAAAAApAA4ACwAAAAAAAAApAA8ACwAAAAAAAAApABAAFQAAAAAAAAAqAAkAAQAAAAAAAAAqAAoACwAAAAAAAAAqAAsACwAAAAAAAAAqAAwACwAAAAAAAAAqAA0ACwAAAAAAAAAqAA4ACwAAAAAAAAAqAA8ACwAAAAAAAAAqABAAFQAAAAAAAAArAAkAAQAAAAAAAAArAAoACwAAAAAAAAArAAsACwAAAAAAAAArAAwACwAAAAAAAAArAA0ACwAAAAAAAAArAA4ACwAAAAAAAAArAA8ACwAAAAAAAAArABAAFQAAAAAAAAAsAAkAAQAAAAAAAAAsAAoACwAAAAAAAAAsAAsACwAAAAAAAAAsAAwACwAAAAAAAAAsAA0ACwAAAAAAAAAsAA4ACwAAAAAAAAAsAA8ACwAAAAAAAAAsABAAFQAAAAAAAAAtAAkAAQAAAAAAAAAtAAoACwAAAAAAAAAtAAsACwAAAAAAAAAtAAwACwAAAAAAAAAtAA0ACwAAAAAAAAAtAA4ACwAAAAAAAAAtAA8ACwAAAAAAAAAtABAAFQAAAAAAAAAuAAkAAQAAAAAAAAAuAAoACwAAAAAAAAAuAAsACwAAAAAAAAAuAAwACwAAAAAAAAAuAA0ACwAAAAAAAAAuAA4ACwAAAAAAAAAuAA8ACwAAAAAAAAAuABAAFQAAAAAAAAAvAAkAAQAAAAAAAAAvAAoACwAAAAAAAAAvAAsACwAAAAAAAAAvAAwACwAAAAAAAAAvAA0ACwAAAAAAAAAvAA4ACwAAAAAAAAAvAA8ACwAAAAAAAAAvABAAFQAAAAAAAAAwAAkAAQAAAAAAAAAwAAoACwAAAAAAAAAwAAsACwAAAAAAAAAwAAwACwAAAAAAAAAwAA0ACwAAAAAAAAAwAA4ACwAAAAAAAAAwAA8ACwAAAAAAAAAwABAAFQAAAAAAAAAxAAkAAQAAAAAAAAAxAAoACwAAAAAAAAAxAAsACwAAAAAAAAAxAAwACwAAAAAAAAAxAA0ACwAAAAAAAAAxAA4ACwAAAAAAAAAxAA8ACwAAAAAAAAAxABAAFQAAAAAAAAAyAAkAAQAAAAAAAAAyAAoACwAAAAAAAAAyAAsACwAAAAAAAAAyAAwACwAAAAAAAAAyAA0ACwAAAAAAAAAyAA4ACwAAAAAAAAAyAA8ACwAAAAAAAAAyABAAFQAAAAAAAAAzAAkAAQAAAAAAAAAzAAoACwAAAAAAAAAzAAsACwAAAAAAAAAzAAwACwAAAAAAAAAzAA0ACwAAAAAAAAAzAA4ACwAAAAAAAAAzAA8ACwAAAAAAAAAzABAAFQAAAAAAAAA0AAkAAQAAAAAAAAA0AAoACwAAAAAAAAA0AAsACwAAAAAAAAA0AAwACwAAAAAAAAA0AA0ACwAAAAAAAAA0AA4ACwAAAAAAAAA0AA8ACwAAAAAAAAA0ABAAFQAAAAAAAAA1AAkAAQAAAAAAAAA1AAoACwAAAAAAAAA1AAsACwAAAAAAAAA1AAwACwAAAAAAAAA1AA0ACwAAAAAAAAA1AA4ACwAAAAAAAAA1AA8ACwAAAAAAAAA1ABAAFQAAAAAAAAA2AAkAAQAAAAAAAAA2AAoACwAAAAAAAAA2AAsACwAAAAAAAAA2AAwACwAAAAAAAAA2AA0ACwAAAAAAAAA2AA4ACwAAAAAAAAA2AA8ACwAAAAAAAAA2ABAAFQAAAAAAAAA3AAkAAQAAAAAAAAA3AAoACwAAAAAAAAA3AAsACwAAAAAAAAA3AAwACwAAAAAAAAA3AA0ACwAAAAAAAAA3AA4ACwAAAAAAAAA3AA8ACwAAAAAAAAA3ABAAFQAAAAAAAAA4AAkAAQAAAAAAAAA4AAoACwAAAAAAAAA4AAsACwAAAAAAAAA4AAwACwAAAAAAAAA4AA0ACwAAAAAAAAA4AA4ACwAAAAAAAAA4AA8ACwAAAAAAAAA4ABAAFQAAAAAAAAA5AAkAAQAAAAAAAAA5AAoACwAAAAAAAAA5AAsACwAAAAAAAAA5AAwACwAAAAAAAAA5AA0ACwAAAAAAAAA5AA4ACwAAAAAAAAA5AA8ACwAAAAAAAAA5ABAAFQAAAAAAAAA6AAkAAQAAAAAAAAA6AAoACwAAAAAAAAA6AAsACwAAAAAAAAA6AAwACwAAAAAAAAA6AA0ACwAAAAAAAAA6AA4ACwAAAAAAAAA6AA8ACwAAAAAAAAA6ABAAFQAAAAAAAAA7AAkAAgAAAAAAAAA7AAoADAAAAAAAAAA7AAsADAAAAAAAAAA7AAwADAAAAAAAAAA7AA0ADAAAAAAAAAA7AA4ADAAAAAAAAAA7AA8ADAAAAAAAAAA7ABAAFgAAAAAAAAA/AAoAAAAAAAAAAAA/AAsACgAAAAAAAAA/AAwACgAAAAAAAAA/AA0ACgAAAAAAAAA/AA4ACgAAAAAAAAA/AA8ACgAAAAAAAAA/ABAAFAAAAAAAAABAAAoAAQAAAAAAAABAAAsACwAAAAAAAABAAAwACwAAAAAAAABAAA0ACwAAAAAAAABAAA4ACwAAAAAAAABAAA8ACwAAAAAAAABAABAAFQAAAAAAAABBAAoAAQAAAAAAAABBAAsACwAAAAAAAABBAAwACwAAAAAAAABBAA0ACwAAAAAAAABBAA4ACwAAAAAAAABBAA8ACwAAAAAAAABBABAAFQAAAAAAAABCAAoAAQAAAAAAAABCAAsACwAAAAAAAABCAAwACwAAAAAAAABCAA0ACwAAAAAAAABCAA4ACwAAAAAAAABCAA8ACwAAAAAAAABCABAAFQAAAAAAAABDAAoAAQAAAAAAAABDAAsACwAAAAAAAABDAAwACwAAAAAAAABDAA0ACwAAAAAAAABDAA4ACwAAAAAAAABDAA8ACwAAAAAAAABDABAAFQAAAAAAAABEAAoAAQAAAAAAAABEAAsACwAAAAAAAABEAAwACwAAAAAAAABEAA0ACwAAAAAAAABEAA4ACwAAAAAAAABEAA8ACwAAAAAAAABEABAAFQAAAAAAAABFAAoAAQAAAAAAAABFAAsACwAAAAAAAABFAAwACwAAAAAAAABFAA0ACwAAAAAAAABFAA4ACwAAAAAAAABFAA8ACwAAAAAAAABFABAAFQAAAAAAAABGAAoAAQAAAAAAAABGAAsACwAAAAAAAABGAAwACwAAAAAAAABGAA0ACwAAAAAAAABGAA4ACwAAAAAAAABGAA8ACwAAAAAAAABGABAAFQAAAAAAAABHAAoAAQAAAAAAAABHAAsACwAAAAAAAABHAAwACwAAAAAAAABHAA0ACwAAAAAAAABHAA4ACwAAAAAAAABHAA8ACwAAAAAAAABHABAAFQAAAAAAAABIAAoAAQAAAAAAAABIAAsACwAAAAAAAABIAAwACwAAAAAAAABIAA0ACwAAAAAAAABIAA4ACwAAAAAAAABIAA8ACwAAAAAAAABIABAAFQAAAAAAAABJAAoAAQAAAAAAAABJAAsACwAAAAAAAABJAAwACwAAAAAAAABJAA0ACwAAAAAAAABJAA4ACwAAAAAAAABJAA8ACwAAAAAAAABJABAAFQAAAAAAAABKAAoAAQAAAAAAAABKAAsACwAAAAAAAABKAAwACwAAAAAAAABKAA0ACwAAAAAAAABKAA4ACwAAAAAAAABKAA8ACwAAAAAAAABKABAAFQAAAAAAAABLAAoAAQAAAAAAAABLAAsACwAAAAAAAABLAAwACwAAAAAAAABLAA0ACwAAAAAAAABLAA4ACwAAAAAAAABLAA8ACwAAAAAAAABLABAAFQAAAAAAAABMAAoAAQAAAAAAAABMAAsACwAAAAAAAABMAAwACwAAAAAAAABMAA0ACwAAAAAAAABMAA4ACwAAAAAAAABMAA8ACwAAAAAAAABMABAAFQAAAAAAAABNAAoAAQAAAAAAAABNAAsACwAAAAAAAABNAAwACwAAAAAAAABNAA0ACwAAAAAAAABNAA4ACwAAAAAAAABNAA8ACwAAAAAAAABNABAAFQAAAAAAAABOAAoAAQAAAAAAAABOAAsACwAAAAAAAABOAAwACwAAAAAAAABOAA0ACwAAAAAAAABOAA4ACwAAAAAAAABOAA8ACwAAAAAAAABOABAAFQAAAAAAAABPAAoAAQAAAAAAAABPAAsACwAAAAAAAABPAAwACwAAAAAAAABPAA0ACwAAAAAAAABPAA4ACwAAAAAAAABPAA8ACwAAAAAAAABPABAAFQAAAAAAAABQAAoAAQAAAAAAAABQAAsACwAAAAAAAABQAAwACwAAAAAAAABQAA0ACwAAAAAAAABQAA4ACwAAAAAAAABQAA8ACwAAAAAAAABQABAAFQAAAAAAAABRAAoAAgAAAAAAAABRAAsADAAAAAAAAABRAAwADAAAAAAAAABRAA0ADAAAAAAAAABRAA4ADAAAAAAAAABRAA8ADAAAAAAAAABRABAAFgAAAAAAAABWAAoAAAAAAAAAAABWAAsACgAAAAAAAABWAAwACgAAAAAAAABWAA0ACgAAAAAAAABWAA4ACgAAAAAAAABWAA8ACgAAAAAAAABWABAAFAAAAAAAAABXAAoAAQAAAAAAAABXAAsACwAAAAAAAABXAAwACwAAAAAAAABXAA0ACwAAAAAAAABXAA4ACwAAAAAAAABXAA8ACwAAAAAAAABXABAAFQAAAAAAAABYAAoAAQAAAAAAAABYAAsACwAAAAAAAABYAAwACwAAAAAAAABYAA0ACwAAAAAAAABYAA4ACwAAAAAAAABYAA8ACwAAAAAAAABYABAAFQAAAAAAAABZAAoAAQAAAAAAAABZAAsACwAAAAAAAABZAAwACwAAAAAAAABZAA0ACwAAAAAAAABZAA4ACwAAAAAAAABZAA8ACwAAAAAAAABZABAAFQAAAAAAAABaAAoAAQAAAAAAAABaAAsACwAAAAAAAABaAAwACwAAAAAAAABaAA0ACwAAAAAAAABaAA4ACwAAAAAAAABaAA8ACwAAAAAAAABaABAAFQAAAAAAAABbAAoAAQAAAAAAAABbAAsACwAAAAAAAABbAAwACwAAAAAAAABbAA0ACwAAAAAAAABbAA4ACwAAAAAAAABbAA8ACwAAAAAAAABbABAAFQAAAAAAAABcAAoAAQAAAAAAAABcAAsACwAAAAAAAABcAAwACwAAAAAAAABcAA0ACwAAAAAAAABcAA4ACwAAAAAAAABcAA8ACwAAAAAAAABcABAAFQAAAAAAAABdAAoAAQAAAAAAAABdAAsACwAAAAAAAABdAAwACwAAAAAAAABdAA0ACwAAAAAAAABdAA4ACwAAAAAAAABdAA8ACwAAAAAAAABdABAAFQAAAAAAAABeAAoAAQAAAAAAAABeAAsACwAAAAAAAABeAAwACwAAAAAAAABeAA0ACwAAAAAAAABeAA4ACwAAAAAAAABeAA8ACwAAAAAAAABeABAAFQAAAAAAAABfAAoAAQAAAAAAAABfAAsACwAAAAAAAABfAAwACwAAAAAAAABfAA0ACwAAAAAAAABfAA4ACwAAAAAAAABfAA8ACwAAAAAAAABfABAAFQAAAAAAAABgAAoAAQAAAAAAAABgAAsACwAAAAAAAABgAAwACwAAAAAAAABgAA0ACwAAAAAAAABgAA4ACwAAAAAAAABgAA8ACwAAAAAAAABgABAAFQAAAAAAAABhAAoAAQAAAAAAAABhAAsACwAAAAAAAABhAAwACwAAAAAAAABhAA0ACwAAAAAAAABhAA4ACwAAAAAAAABhAA8ACwAAAAAAAABhABAAFQAAAAAAAABiAAoAAQAAAAAAAABiAAsACwAAAAAAAABiAAwACwAAAAAAAABiAA0ACwAAAAAAAABiAA4ACwAAAAAAAABiAA8ACwAAAAAAAABiABAAFQAAAAAAAABjAAoAAQAAAAAAAABjAAsACwAAAAAAAABjAAwACwAAAAAAAABjAA0ACwAAAAAAAABjAA4ACwAAAAAAAABjAA8ACwAAAAAAAABjABAAFQAAAAAAAABkAAoAAQAAAAAAAABkAAsACwAAAAAAAABkAAwACwAAAAAAAABkAA0ACwAAAAAAAABkAA4ACwAAAAAAAABkAA8ACwAAAAAAAABkABAAFQAAAAAAAABlAAoAAQAAAAAAAABlAAsACwAAAAAAAABlAAwACwAAAAAAAABlAA0ACwAAAAAAAABlAA4ACwAAAAAAAABlAA8ACwAAAAAAAABlABAAFQAAAAAAAABmAAoAAQAAAAAAAABmAAsACwAAAAAAAABmAAwACwAAAAAAAABmAA0ACwAAAAAAAABmAA4ACwAAAAAAAABmAA8ACwAAAAAAAABmABAAFQAAAAAAAABnAAoAAQAAAAAAAABnAAsACwAAAAAAAABnAAwACwAAAAAAAABnAA0ACwAAAAAAAABnAA4ACwAAAAAAAABnAA8ACwAAAAAAAABnABAAFQAAAAAAAABoAAoAAQAAAAAAAABoAAsACwAAAAAAAABoAAwACwAAAAAAAABoAA0ACwAAAAAAAABoAA4ACwAAAAAAAABoAA8ACwAAAAAAAABoABAAFQAAAAAAAABpAAoAAQAAAAAAAABpAAsACwAAAAAAAABpAAwACwAAAAAAAABpAA0ACwAAAAAAAABpAA4ACwAAAAAAAABpAA8ACwAAAAAAAABpABAAFQAAAAAAAABqAAoAAQAAAAAAAABqAAsACwAAAAAAAABqAAwACwAAAAAAAABqAA0ACwAAAAAAAABqAA4ACwAAAAAAAABqAA8ACwAAAAAAAABqABAAFQAAAAAAAABrAAoAAQAAAAAAAABrAAsACwAAAAAAAABrAAwACwAAAAAAAABrAA0ACwAAAAAAAABrAA4ACwAAAAAAAABrAA8ACwAAAAAAAABrABAAFQAAAAAAAABsAAoAAQAAAAAAAABsAAsACwAAAAAAAABsAAwACwAAAAAAAABsAA0ACwAAAAAAAABsAA4ACwAAAAAAAABsAA8ACwAAAAAAAABsABAAFQAAAAAAAABtAAoAAQAAAAAAAABtAAsACwAAAAAAAABtAAwACwAAAAAAAABtAA0ACwAAAAAAAABtAA4ACwAAAAAAAABtAA8ACwAAAAAAAABtABAAFQAAAAAAAABuAAoAAQAAAAAAAABuAAsACwAAAAAAAABuAAwACwAAAAAAAABuAA0ACwAAAAAAAABuAA4ACwAAAAAAAABuAA8ACwAAAAAAAABuABAAFQAAAAAAAABvAAoAAgAAAAAAAABvAAsADAAAAAAAAABvAAwADAAAAAAAAABvAA0ADAAAAAAAAABvAA4ADAAAAAAAAABvAA8ADAAAAAAAAABvABAAFgAAAAAAAAA=")
+tile_set = ExtResource("8_n1w8o")
+
+[node name="CanopyPlatforms" type="TileMapLayer" parent="." unique_id=1717483198]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAGAAgAAAAAAAAAAAAHAAgAAQAAAAAAAAAIAAgAAQAAAAAAAAAJAAgAAQAAAAAAAAAKAAgAAgAAAAAAAAAYAAUAAAAAAAAAAAAZAAUAAQAAAAAAAAAaAAUAAQAAAAAAAAAbAAUAAQAAAAAAAAAcAAUAAQAAAAAAAAAdAAUAAgAAAAAAAAAtAAUAAAAAAAAAAAAuAAUAAQAAAAAAAAAvAAUAAQAAAAAAAAAwAAUAAQAAAAAAAAAxAAUAAQAAAAAAAAAyAAUAAgAAAAAAAABFAAYAAAAAAAAAAABGAAYAAQAAAAAAAABHAAYAAQAAAAAAAABIAAYAAQAAAAAAAABJAAYAAQAAAAAAAABKAAYAAgAAAAAAAABcAAUAAAAAAAAAAABdAAUAAQAAAAAAAABeAAUAAQAAAAAAAABfAAUAAQAAAAAAAABgAAUAAQAAAAAAAABhAAUAAQAAAAAAAABiAAUAAQAAAAAAAABjAAUAAgAAAAAAAAA=")
+tile_set = ExtResource("9_22e5y")
+
+[node name="Pickup_016" type="Area2D" parent="." unique_id=1747937387]
+position = Vector2(474, 457)
+script = ExtResource("10_rjetw")
+kind = 1
+
+[node name="Pickup_017" type="Area2D" parent="." unique_id=1015537655]
+position = Vector2(544, 467)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_018" type="Area2D" parent="." unique_id=1877067767]
+position = Vector2(608, 467)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_019" type="Area2D" parent="." unique_id=919114334]
+position = Vector2(672, 467)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_020" type="Area2D" parent="." unique_id=484252027]
+position = Vector2(1626, 265)
+script = ExtResource("10_rjetw")
+kind = 1
+
+[node name="Pickup_021" type="Area2D" parent="." unique_id=1250842092]
+position = Vector2(1696, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_022" type="Area2D" parent="." unique_id=1580462248]
+position = Vector2(1760, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_023" type="Area2D" parent="." unique_id=2069841643]
+position = Vector2(1824, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_024" type="Area2D" parent="." unique_id=321365894]
+position = Vector2(1888, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_025" type="Area2D" parent="." unique_id=1430124411]
+position = Vector2(2970, 265)
+script = ExtResource("10_rjetw")
+kind = 1
+
+[node name="Pickup_026" type="Area2D" parent="." unique_id=921215980]
+position = Vector2(3040, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_027" type="Area2D" parent="." unique_id=186757624]
+position = Vector2(3104, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_028" type="Area2D" parent="." unique_id=732082382]
+position = Vector2(3168, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_029" type="Area2D" parent="." unique_id=1381882715]
+position = Vector2(3232, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_030" type="Area2D" parent="." unique_id=338064937]
+position = Vector2(4506, 329)
+script = ExtResource("10_rjetw")
+kind = 1
+
+[node name="Pickup_031" type="Area2D" parent="." unique_id=744740498]
+position = Vector2(4576, 339)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_032" type="Area2D" parent="." unique_id=577954661]
+position = Vector2(4640, 339)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_033" type="Area2D" parent="." unique_id=460029647]
+position = Vector2(4704, 339)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_034" type="Area2D" parent="." unique_id=1299597446]
+position = Vector2(4768, 339)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_035" type="Area2D" parent="." unique_id=15383574]
+position = Vector2(5978, 265)
+script = ExtResource("10_rjetw")
+kind = 1
+
+[node name="Pickup_036" type="Area2D" parent="." unique_id=786362217]
+position = Vector2(6048, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_037" type="Area2D" parent="." unique_id=1097055840]
+position = Vector2(6112, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_038" type="Area2D" parent="." unique_id=724552522]
+position = Vector2(6176, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_039" type="Area2D" parent="." unique_id=154966153]
+position = Vector2(6240, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_040" type="Area2D" parent="." unique_id=1248074886]
+position = Vector2(6304, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_041" type="Area2D" parent="." unique_id=1243722710]
+position = Vector2(6368, 275)
+script = ExtResource("10_rjetw")
+
+[node name="Willow_042" type="Sprite2D" parent="." unique_id=148062960]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(96, 706)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_043" type="Sprite2D" parent="." unique_id=1038636310]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(352, 706)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_044" type="Sprite2D" parent="." unique_id=1149744801]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(608, 706)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_045" type="Sprite2D" parent="." unique_id=1634643442]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(864, 706)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Grass_046" type="Sprite2D" parent="." unique_id=1751576807]
+z_index = 2
+position = Vector2(78, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_047" type="Sprite2D" parent="." unique_id=2075673185]
+z_index = 2
+position = Vector2(206, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Grass_048" type="Sprite2D" parent="." unique_id=1089656134]
+z_index = 2
+position = Vector2(334, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("16_2x1gy")
+offset = Vector2(0, -4.5)
+
+[node name="Grass_049" type="Sprite2D" parent="." unique_id=1780968977]
+z_index = 2
+position = Vector2(462, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Grass_050" type="Sprite2D" parent="." unique_id=1248283294]
+z_index = 2
+position = Vector2(590, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("18_fa44l")
+offset = Vector2(0, -5.5)
+
+[node name="Grass_051" type="Sprite2D" parent="." unique_id=1388458108]
+z_index = 2
+position = Vector2(718, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_052" type="Sprite2D" parent="." unique_id=1862042157]
+z_index = 2
+position = Vector2(846, 708)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Pickup_053" type="Area2D" parent="." unique_id=2066431034]
+position = Vector2(224, 657)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_054" type="Area2D" parent="." unique_id=745898890]
+position = Vector2(416, 657)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_055" type="Area2D" parent="." unique_id=861282115]
+position = Vector2(608, 657)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_056" type="Area2D" parent="." unique_id=203383872]
+position = Vector2(800, 657)
+script = ExtResource("10_rjetw")
+
+[node name="Willow_057" type="Sprite2D" parent="." unique_id=1943735224]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(1312, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_058" type="Sprite2D" parent="." unique_id=510850902]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(1568, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_059" type="Sprite2D" parent="." unique_id=1160120588]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(1824, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_060" type="Sprite2D" parent="." unique_id=2034817519]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(2080, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Grass_061" type="Sprite2D" parent="." unique_id=844644270]
+z_index = 2
+position = Vector2(1294, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("19_e8atg")
+offset = Vector2(0, -9)
+
+[node name="Grass_062" type="Sprite2D" parent="." unique_id=1806905670]
+z_index = 2
+position = Vector2(1422, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("20_rn7an")
+offset = Vector2(0, -8)
+
+[node name="Grass_063" type="Sprite2D" parent="." unique_id=1949355874]
+z_index = 2
+position = Vector2(1550, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("21_d553h")
+offset = Vector2(0, -6.5)
+
+[node name="Grass_064" type="Sprite2D" parent="." unique_id=658260510]
+z_index = 2
+position = Vector2(1678, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("22_lxflx")
+offset = Vector2(0, -7)
+
+[node name="Grass_065" type="Sprite2D" parent="." unique_id=628765555]
+z_index = 2
+position = Vector2(1806, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("23_8alx7")
+offset = Vector2(0, -4)
+
+[node name="Grass_066" type="Sprite2D" parent="." unique_id=1498515793]
+z_index = 2
+position = Vector2(1934, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("19_e8atg")
+offset = Vector2(0, -9)
+
+[node name="Grass_067" type="Sprite2D" parent="." unique_id=1930200668]
+z_index = 2
+position = Vector2(2062, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("20_rn7an")
+offset = Vector2(0, -8)
+
+[node name="Grass_068" type="Sprite2D" parent="." unique_id=2021544266]
+z_index = 2
+position = Vector2(2190, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("21_d553h")
+offset = Vector2(0, -6.5)
+
+[node name="Pickup_069" type="Area2D" parent="." unique_id=582708028]
+position = Vector2(1440, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_070" type="Area2D" parent="." unique_id=530685741]
+position = Vector2(1632, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_071" type="Area2D" parent="." unique_id=614020577]
+position = Vector2(1824, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_072" type="Area2D" parent="." unique_id=741933629]
+position = Vector2(2016, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Willow_073" type="Sprite2D" parent="." unique_id=673608453]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(2656, 578)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_074" type="Sprite2D" parent="." unique_id=1133864937]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(2912, 578)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_075" type="Sprite2D" parent="." unique_id=472670164]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(3168, 578)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_076" type="Sprite2D" parent="." unique_id=932690670]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(3424, 578)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_077" type="Sprite2D" parent="." unique_id=2085382188]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(3680, 578)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Grass_078" type="Sprite2D" parent="." unique_id=1697914551]
+z_index = 2
+position = Vector2(2638, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_079" type="Sprite2D" parent="." unique_id=1949399423]
+z_index = 2
+position = Vector2(2766, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Grass_080" type="Sprite2D" parent="." unique_id=118593940]
+z_index = 2
+position = Vector2(2894, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("16_2x1gy")
+offset = Vector2(0, -4.5)
+
+[node name="Grass_081" type="Sprite2D" parent="." unique_id=826169438]
+z_index = 2
+position = Vector2(3022, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Grass_082" type="Sprite2D" parent="." unique_id=1856351648]
+z_index = 2
+position = Vector2(3150, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("18_fa44l")
+offset = Vector2(0, -5.5)
+
+[node name="Grass_083" type="Sprite2D" parent="." unique_id=2144564457]
+z_index = 2
+position = Vector2(3278, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_084" type="Sprite2D" parent="." unique_id=1135467313]
+z_index = 2
+position = Vector2(3406, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Grass_085" type="Sprite2D" parent="." unique_id=2131280564]
+z_index = 2
+position = Vector2(3534, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("16_2x1gy")
+offset = Vector2(0, -4.5)
+
+[node name="Grass_086" type="Sprite2D" parent="." unique_id=1293695187]
+z_index = 2
+position = Vector2(3662, 580)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Pickup_087" type="Area2D" parent="." unique_id=441603855]
+position = Vector2(2784, 529)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_088" type="Area2D" parent="." unique_id=318796137]
+position = Vector2(2976, 529)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_089" type="Area2D" parent="." unique_id=1297487782]
+position = Vector2(3168, 529)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_090" type="Area2D" parent="." unique_id=42483614]
+position = Vector2(3360, 529)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_091" type="Area2D" parent="." unique_id=850146623]
+position = Vector2(3552, 529)
+script = ExtResource("10_rjetw")
+
+[node name="Willow_092" type="Sprite2D" parent="." unique_id=1360713564]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(4128, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_093" type="Sprite2D" parent="." unique_id=1752251104]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(4384, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_094" type="Sprite2D" parent="." unique_id=1719563000]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(4640, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_095" type="Sprite2D" parent="." unique_id=248049916]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(4896, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_096" type="Sprite2D" parent="." unique_id=1156772217]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(5152, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Grass_097" type="Sprite2D" parent="." unique_id=1844738331]
+z_index = 2
+position = Vector2(4110, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("21_d553h")
+offset = Vector2(0, -6.5)
+
+[node name="Grass_098" type="Sprite2D" parent="." unique_id=1043577119]
+z_index = 2
+position = Vector2(4238, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("22_lxflx")
+offset = Vector2(0, -7)
+
+[node name="Grass_099" type="Sprite2D" parent="." unique_id=462923922]
+z_index = 2
+position = Vector2(4366, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("23_8alx7")
+offset = Vector2(0, -4)
+
+[node name="Grass_100" type="Sprite2D" parent="." unique_id=1217172595]
+z_index = 2
+position = Vector2(4494, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("19_e8atg")
+offset = Vector2(0, -9)
+
+[node name="Grass_101" type="Sprite2D" parent="." unique_id=1038043081]
+z_index = 2
+position = Vector2(4622, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("20_rn7an")
+offset = Vector2(0, -8)
+
+[node name="Grass_102" type="Sprite2D" parent="." unique_id=931181234]
+z_index = 2
+position = Vector2(4750, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("21_d553h")
+offset = Vector2(0, -6.5)
+
+[node name="Grass_103" type="Sprite2D" parent="." unique_id=272459848]
+z_index = 2
+position = Vector2(4878, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("22_lxflx")
+offset = Vector2(0, -7)
+
+[node name="Grass_104" type="Sprite2D" parent="." unique_id=1765141121]
+z_index = 2
+position = Vector2(5006, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("23_8alx7")
+offset = Vector2(0, -4)
+
+[node name="Grass_105" type="Sprite2D" parent="." unique_id=539555521]
+z_index = 2
+position = Vector2(5134, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("19_e8atg")
+offset = Vector2(0, -9)
+
+[node name="Pickup_106" type="Area2D" parent="." unique_id=1907921238]
+position = Vector2(4256, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_107" type="Area2D" parent="." unique_id=54512378]
+position = Vector2(4448, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_108" type="Area2D" parent="." unique_id=501270412]
+position = Vector2(4640, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_109" type="Area2D" parent="." unique_id=347735381]
+position = Vector2(4832, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_110" type="Area2D" parent="." unique_id=769475891]
+position = Vector2(5024, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Willow_111" type="Sprite2D" parent="." unique_id=1803717068]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(5600, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_112" type="Sprite2D" parent="." unique_id=1926573577]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(5856, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_113" type="Sprite2D" parent="." unique_id=885350406]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(6112, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Willow_114" type="Sprite2D" parent="." unique_id=718424276]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(6368, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("13_n1d1d")
+offset = Vector2(0, -67.5)
+
+[node name="Willow_115" type="Sprite2D" parent="." unique_id=1646530215]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(6624, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_erfge")
+offset = Vector2(0, -84)
+
+[node name="Willow_116" type="Sprite2D" parent="." unique_id=485847986]
+modulate = Color(0.5137255, 0.6117647, 0.5294118, 1)
+z_index = -3
+position = Vector2(6880, 642)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("12_fv7jd")
+offset = Vector2(0, -91.5)
+
+[node name="Grass_117" type="Sprite2D" parent="." unique_id=1297062617]
+z_index = 2
+position = Vector2(5582, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Grass_118" type="Sprite2D" parent="." unique_id=306241817]
+z_index = 2
+position = Vector2(5710, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("18_fa44l")
+offset = Vector2(0, -5.5)
+
+[node name="Grass_119" type="Sprite2D" parent="." unique_id=810769606]
+z_index = 2
+position = Vector2(5838, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_120" type="Sprite2D" parent="." unique_id=2072234988]
+z_index = 2
+position = Vector2(5966, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Grass_121" type="Sprite2D" parent="." unique_id=60196293]
+z_index = 2
+position = Vector2(6094, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("16_2x1gy")
+offset = Vector2(0, -4.5)
+
+[node name="Grass_122" type="Sprite2D" parent="." unique_id=1747059329]
+z_index = 2
+position = Vector2(6222, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Grass_123" type="Sprite2D" parent="." unique_id=1527469967]
+z_index = 2
+position = Vector2(6350, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("18_fa44l")
+offset = Vector2(0, -5.5)
+
+[node name="Grass_124" type="Sprite2D" parent="." unique_id=1945479940]
+z_index = 2
+position = Vector2(6478, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("14_41iqh")
+offset = Vector2(0, -8)
+
+[node name="Grass_125" type="Sprite2D" parent="." unique_id=1099190814]
+z_index = 2
+position = Vector2(6606, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("15_7g31s")
+offset = Vector2(0, -6)
+
+[node name="Grass_126" type="Sprite2D" parent="." unique_id=1909832807]
+z_index = 2
+position = Vector2(6734, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("16_2x1gy")
+offset = Vector2(0, -4.5)
+
+[node name="Grass_127" type="Sprite2D" parent="." unique_id=2040394469]
+z_index = 2
+position = Vector2(6862, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("17_fvacs")
+offset = Vector2(0, -7)
+
+[node name="Grass_128" type="Sprite2D" parent="." unique_id=159484211]
+z_index = 2
+position = Vector2(6990, 644)
+scale = Vector2(2, 2)
+texture = ExtResource("18_fa44l")
+offset = Vector2(0, -5.5)
+
+[node name="Pickup_129" type="Area2D" parent="." unique_id=569396026]
+position = Vector2(5728, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_130" type="Area2D" parent="." unique_id=1080893911]
+position = Vector2(5920, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_131" type="Area2D" parent="." unique_id=1646317656]
+position = Vector2(6112, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_132" type="Area2D" parent="." unique_id=1159009162]
+position = Vector2(6304, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_133" type="Area2D" parent="." unique_id=810553723]
+position = Vector2(6496, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_134" type="Area2D" parent="." unique_id=1763058437]
+position = Vector2(6688, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_135" type="Area2D" parent="." unique_id=1479177021]
+position = Vector2(6880, 593)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_136" type="Area2D" parent="." unique_id=1003471443]
+position = Vector2(1048, 530.12555)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_137" type="Area2D" parent="." unique_id=1348576438]
+position = Vector2(1096, 494.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_138" type="Area2D" parent="." unique_id=751870041]
+position = Vector2(1144, 494.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_139" type="Area2D" parent="." unique_id=305321461]
+position = Vector2(1192, 530.12555)
+script = ExtResource("10_rjetw")
+
+[node name="Lava_140" type="Area2D" parent="." unique_id=647259389]
+position = Vector2(1120, 720)
+script = ExtResource("24_15bgg")
+kind = 2
+hazard_size = Vector2(192, 110)
+phase = 23.630000000000003
+
+[node name="Pickup_141" type="Area2D" parent="." unique_id=491612480]
+position = Vector2(2336, 466.12558)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_142" type="Area2D" parent="." unique_id=1983594133]
+position = Vector2(2400, 430.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_143" type="Area2D" parent="." unique_id=1897582495]
+position = Vector2(2464, 430.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_144" type="Area2D" parent="." unique_id=811402947]
+position = Vector2(2528, 466.12558)
+script = ExtResource("10_rjetw")
+
+[node name="Lava_145" type="Area2D" parent="." unique_id=951685799]
+position = Vector2(2432, 656)
+script = ExtResource("24_15bgg")
+kind = 2
+hazard_size = Vector2(256, 110)
+phase = 24.48
+
+[node name="Pickup_146" type="Area2D" parent="." unique_id=1487939267]
+position = Vector2(3864, 466.12558)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_147" type="Area2D" parent="." unique_id=1576474680]
+position = Vector2(3912, 430.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_148" type="Area2D" parent="." unique_id=1569489076]
+position = Vector2(3960, 430.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_149" type="Area2D" parent="." unique_id=1377905770]
+position = Vector2(4008, 466.12558)
+script = ExtResource("10_rjetw")
+
+[node name="Lava_150" type="Area2D" parent="." unique_id=1537169109]
+position = Vector2(3936, 656)
+script = ExtResource("24_15bgg")
+kind = 2
+hazard_size = Vector2(192, 110)
+phase = 25.330000000000002
+
+[node name="Pickup_151" type="Area2D" parent="." unique_id=732071751]
+position = Vector2(5280, 530.12555)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_152" type="Area2D" parent="." unique_id=1324283277]
+position = Vector2(5344, 494.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_153" type="Area2D" parent="." unique_id=772615050]
+position = Vector2(5408, 494.94785)
+script = ExtResource("10_rjetw")
+
+[node name="Pickup_154" type="Area2D" parent="." unique_id=1645201765]
+position = Vector2(5472, 530.12555)
+script = ExtResource("10_rjetw")
+
+[node name="Lava_155" type="Area2D" parent="." unique_id=1900080283]
+position = Vector2(5376, 720)
+script = ExtResource("24_15bgg")
+kind = 2
+hazard_size = Vector2(256, 110)
+phase = 26.180000000000003
+
+[node name="Blade_156" type="Area2D" parent="." unique_id=1982078325]
+position = Vector2(1984, 592)
+script = ExtResource("24_15bgg")
+hazard_size = Vector2(64, 64)
+travel = Vector2(0, -80)
+phase = 26.35
+
+[node name="Blade_157" type="Area2D" parent="." unique_id=859777761]
+position = Vector2(3456, 528)
+script = ExtResource("24_15bgg")
+hazard_size = Vector2(64, 64)
+travel = Vector2(100, 0)
+phase = 26.520000000000003
+
+[node name="Blade_158" type="Area2D" parent="." unique_id=37059081]
+position = Vector2(6080, 592)
+script = ExtResource("24_15bgg")
+hazard_size = Vector2(64, 64)
+travel = Vector2(0, -100)
+phase = 26.69
+
+[node name="Fire_159" type="Area2D" parent="." unique_id=1594142172]
+position = Vector2(4864, 605)
+script = ExtResource("24_15bgg")
+kind = 1
+hazard_size = Vector2(66, 70)
+phase = 26.860000000000003
+
+[node name="JumpBoard_160" type="Area2D" parent="." unique_id=168872323]
+position = Vector2(288, 700)
+script = ExtResource("25_hprw8")
+
+[node name="JumpBoard_161" type="Area2D" parent="." unique_id=2049898226]
+position = Vector2(2784, 572)
+script = ExtResource("25_hprw8")
+
+[node name="JumpBoard_162" type="Area2D" parent="." unique_id=1822218551]
+position = Vector2(5792, 636)
+script = ExtResource("25_hprw8")
+
+[node name="Elevator_163" type="AnimatableBody2D" parent="." unique_id=1108276115]
+position = Vector2(1504, 626)
+script = ExtResource("26_ei2s5")
+kind = 1
+travel = Vector2(0, -260)
+duration = 4.2
+
+[node name="Elevator_164" type="AnimatableBody2D" parent="." unique_id=630127011]
+position = Vector2(4384, 626)
+script = ExtResource("26_ei2s5")
+kind = 1
+travel = Vector2(0, -256)
+duration = 4.2
+
+[node name="Elevator_165" type="AnimatableBody2D" parent="." unique_id=565487016]
+position = Vector2(6496, 626)
+script = ExtResource("26_ei2s5")
+kind = 1
+travel = Vector2(0, -300)
+duration = 4.2
+
+[node name="MovingPlatform_166" type="AnimatableBody2D" parent="." unique_id=897808852]
+position = Vector2(2400, 626)
+script = ExtResource("26_ei2s5")
+travel = Vector2(110, -64)
+duration = 3.6
+
+[node name="MovingPlatform_167" type="AnimatableBody2D" parent="." unique_id=1768301286]
+position = Vector2(5344, 626)
+script = ExtResource("26_ei2s5")
+travel = Vector2(110, 0)
+duration = 3.6
+
+[node name="WarpGate_168" type="Area2D" parent="." unique_id=1989647508]
+position = Vector2(4704, 384)
+script = ExtResource("27_heam3")
+destination = Vector2(6112, 315)
+caption = "WARP"
+
+[node name="WarpGate_169" type="Area2D" parent="." unique_id=1510912137]
+position = Vector2(6112, 320)
+script = ExtResource("27_heam3")
+destination = Vector2(4704, 379)
+caption = "WARP"
+
+[node name="Checkpoint_170" type="Area2D" parent="." unique_id=2131413453]
+position = Vector2(1376, 640)
+script = ExtResource("27_heam3")
+kind = 2
+caption = "REST"
+
+[node name="Checkpoint_171" type="Area2D" parent="." unique_id=620804320]
+position = Vector2(4192, 640)
+script = ExtResource("27_heam3")
+kind = 2
+caption = "REST"
+
+[node name="Checkpoint_172" type="Area2D" parent="." unique_id=847957067]
+position = Vector2(5728, 640)
+script = ExtResource("27_heam3")
+kind = 2
+caption = "REST"
+
+[node name="Pickup_173" type="Area2D" parent="." unique_id=1662731100]
+position = Vector2(288, 660)
+script = ExtResource("10_rjetw")
+kind = 4
+
+[node name="Pickup_174" type="Area2D" parent="." unique_id=1976575020]
+position = Vector2(1312, 596)
+script = ExtResource("10_rjetw")
+kind = 3
+
+[node name="Pickup_175" type="Area2D" parent="." unique_id=1170889838]
+position = Vector2(2784, 532)
+script = ExtResource("10_rjetw")
+kind = 2
+
+[node name="Pickup_176" type="Area2D" parent="." unique_id=916276859]
+position = Vector2(4256, 596)
+script = ExtResource("10_rjetw")
+kind = 4
+
+[node name="Pickup_177" type="Area2D" parent="." unique_id=1367332883]
+position = Vector2(5664, 596)
+script = ExtResource("10_rjetw")
+kind = 3
+
+[node name="Pickup_178" type="Area2D" parent="." unique_id=245310133]
+position = Vector2(6624, 596)
+script = ExtResource("10_rjetw")
+kind = 2
+
+[node name="Enemy_179" parent="." unique_id=600502477 instance=ExtResource("28_0hoou")]
+position = Vector2(800, 700)
+speed = 71.0
+direction = -1
+hp = 50
+hp_max = 50
+score = 25
+type = 1
+label = "Moss Slime"
+
+[node name="Enemy_180" parent="." unique_id=526747577 instance=ExtResource("29_6krhw")]
+position = Vector2(1888, 636)
+speed = 71.0
+direction = -1
+score = 25
+label = "Sporeling"
+
+[node name="Enemy_181" parent="." unique_id=1577601674 instance=ExtResource("28_0hoou")]
+position = Vector2(3040, 572)
+speed = 71.0
+direction = -1
+hp = 50
+hp_max = 50
+score = 25
+type = 1
+label = "Moss Slime"
+
+[node name="Enemy_182" parent="." unique_id=1182108407 instance=ExtResource("29_6krhw")]
+position = Vector2(3680, 572)
+speed = 71.0
+direction = -1
+score = 25
+label = "Sporeling"
+
+[node name="Enemy_183" parent="." unique_id=1032522205 instance=ExtResource("28_0hoou")]
+position = Vector2(4640, 636)
+speed = 71.0
+direction = -1
+hp = 50
+hp_max = 50
+score = 25
+type = 1
+label = "Moss Slime"
+
+[node name="Enemy_184" parent="." unique_id=1028368737 instance=ExtResource("29_6krhw")]
+position = Vector2(6176, 636)
+speed = 71.0
+direction = -1
+score = 25
+label = "Sporeling"
+
+[node name="Enemy_185" parent="." unique_id=426533960 instance=ExtResource("28_0hoou")]
+position = Vector2(6752, 636)
+speed = 71.0
+direction = -1
+hp = 50
+hp_max = 50
+score = 25
+type = 1
+label = "Moss Slime"
+
+[node name="Player" parent="." unique_id=2106209264 instance=ExtResource("30_rus1u")]
+position = Vector2(160, 696)
+rotation = 0.0
+double_jump = true
+
+[node name="ExitGate_187" type="Area2D" parent="." unique_id=2056208530]
+position = Vector2(7008, 640)
+script = ExtResource("27_heam3")
+kind = 1
+next_level = "res://Scenes/Levels/level_03.tscn"
+caption = "NEXT TRAIL"
+
+[node name="UserInterface" parent="." unique_id=1208748598 instance=ExtResource("31_d04u1")]
+
+[node name="TrailSign_189" type="Label" parent="." unique_id=25265861]
+offset_left = 110.0
+offset_top = 504.0
+offset_right = 550.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.90588236, 0.9019608, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.23137255, 0.22352941, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "02  /  CANOPY ASCENT
+RIDE THE LIFTS. FOLLOW THE GOLD."
+
+[node name="TrailSign_190" type="Label" parent="." unique_id=1199456559]
+offset_left = 192.0
+offset_top = 569.0
+offset_right = 632.0
+offset_bottom = 654.0
+theme_override_colors/font_color = Color(0.90588236, 0.9019608, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.23137255, 0.22352941, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "SPRINGBOARD
+LAND ON IT TO SOAR"
+
+[node name="TrailSign_191" type="Label" parent="." unique_id=1531164092]
+offset_left = 1264.0
+offset_top = 450.0
+offset_right = 1704.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(0.90588236, 0.9019608, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.23137255, 0.22352941, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "A PLACE TO REST
+CHECKPOINT  /  RECOVER HEALTH"
+
+[node name="TrailSign_192" type="Label" parent="." unique_id=336090441]
+offset_left = 4080.0
+offset_top = 450.0
+offset_right = 4520.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(0.90588236, 0.9019608, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.23137255, 0.22352941, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "A PLACE TO REST
+CHECKPOINT  /  RECOVER HEALTH"
+
+[node name="TrailSign_193" type="Label" parent="." unique_id=1757661723]
+offset_left = 5616.0
+offset_top = 450.0
+offset_right = 6056.0
+offset_bottom = 535.0
+theme_override_colors/font_color = Color(0.90588236, 0.9019608, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.1254902, 0.23137255, 0.22352941, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "A PLACE TO REST
+CHECKPOINT  /  RECOVER HEALTH"

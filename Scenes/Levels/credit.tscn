@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://bajrtxxftc6wt"]
 
+[ext_resource type="Texture2D" uid="uid://dpvdy1fyp21jc" path="res://Assets/BG/2/1.png" id="1_0lh7m"]
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="1_2g1tp"]
 [ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_fnvqj"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="3_fnvqj"]
+[ext_resource type="Texture2D" uid="uid://dieqwe1vhnpnb" path="res://Assets/BG/2/2.png" id="5_qu31k"]
 
 [node name="Node2D" type="Node2D" unique_id=264957255]
+
+[node name="1" type="Sprite2D" parent="." unique_id=1832423086]
+position = Vector2(599.49994, 293.99997)
+scale = Vector2(2.0920138, 1.8148147)
+texture = ExtResource("1_0lh7m")
 
 [node name="Control" type="Control" parent="." unique_id=423201679]
 layout_mode = 3
@@ -56,7 +63,9 @@ vertical_alignment = 1
 [node name="btnExit" parent="Control" unique_id=1633606001 instance=ExtResource("3_fnvqj")]
 layout_mode = 0
 offset_left = 33.0
+offset_top = 0.0
 offset_right = 159.0
+offset_bottom = 54.0
 
 [node name="Title3" type="Label" parent="Control" unique_id=1657901293]
 layout_mode = 1
@@ -80,16 +89,18 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -187.0
-offset_top = 360.0
-offset_right = 193.0
-offset_bottom = 407.0
+offset_left = -147.0
+offset_top = 356.0
+offset_right = 186.0
+offset_bottom = 403.0
 grow_horizontal = 2
 theme = ExtResource("1_2g1tp")
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 16
-text = "1. 
-2.
-3.
-4."
+text = "1. พีรพงษ์ ราษีทอง         รหัส 673380334-5"
 vertical_alignment = 1
+
+[node name="2" type="Sprite2D" parent="." unique_id=1802057976]
+position = Vector2(600.00006, 416.5)
+scale = Vector2(2.138889, 1.4969134)
+texture = ExtResource("5_qu31k")

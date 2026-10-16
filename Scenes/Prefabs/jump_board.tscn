@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/jump_board.gd" id="1_2mdck"]
+
+[node name="JumpBoard" type="Area2D" unique_id=890204156]
+script = ExtResource("1_2mdck")

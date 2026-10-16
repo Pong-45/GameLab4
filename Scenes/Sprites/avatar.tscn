@@ -1,0 +1,475 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_000.png" id="Idle_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_001.png" id="Idle_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_002.png" id="Idle_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_003.png" id="Idle_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_004.png" id="Idle_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_005.png" id="Idle_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_006.png" id="Idle_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_007.png" id="Idle_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_008.png" id="Idle_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__IDLE_009.png" id="Idle_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_000.png" id="Walk_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_001.png" id="Walk_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_002.png" id="Walk_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_003.png" id="Walk_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_004.png" id="Walk_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_005.png" id="Walk_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_006.png" id="Walk_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_007.png" id="Walk_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_008.png" id="Walk_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__WALK_009.png" id="Walk_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_000.png" id="Run_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_001.png" id="Run_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_002.png" id="Run_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_003.png" id="Run_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_004.png" id="Run_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_005.png" id="Run_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_006.png" id="Run_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_007.png" id="Run_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_008.png" id="Run_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__RUN_009.png" id="Run_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_000.png" id="Jump_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_001.png" id="Jump_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_002.png" id="Jump_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_003.png" id="Jump_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_004.png" id="Jump_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_005.png" id="Jump_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_006.png" id="Jump_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_007.png" id="Jump_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_008.png" id="Jump_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__JUMP_009.png" id="Jump_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_000.png" id="Attack_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_001.png" id="Attack_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_002.png" id="Attack_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_003.png" id="Attack_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_004.png" id="Attack_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_005.png" id="Attack_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_006.png" id="Attack_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_007.png" id="Attack_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_008.png" id="Attack_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__ATTACK_009.png" id="Attack_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_000.png" id="Hurt_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_001.png" id="Hurt_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_002.png" id="Hurt_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_003.png" id="Hurt_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_004.png" id="Hurt_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_005.png" id="Hurt_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_006.png" id="Hurt_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_007.png" id="Hurt_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_008.png" id="Hurt_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__HURT_009.png" id="Hurt_9"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_000.png" id="Die_0"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_001.png" id="Die_1"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_002.png" id="Die_2"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_003.png" id="Die_3"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_004.png" id="Die_4"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_005.png" id="Die_5"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_006.png" id="Die_6"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_007.png" id="Die_7"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_008.png" id="Die_8"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/avatar/Elf_01__DIE_009.png" id="Die_9"]
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_0"]
+atlas = ExtResource("Idle_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_1"]
+atlas = ExtResource("Idle_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_2"]
+atlas = ExtResource("Idle_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_3"]
+atlas = ExtResource("Idle_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_4"]
+atlas = ExtResource("Idle_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_5"]
+atlas = ExtResource("Idle_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_6"]
+atlas = ExtResource("Idle_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_7"]
+atlas = ExtResource("Idle_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_8"]
+atlas = ExtResource("Idle_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Idle_9"]
+atlas = ExtResource("Idle_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_0"]
+atlas = ExtResource("Walk_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_1"]
+atlas = ExtResource("Walk_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_2"]
+atlas = ExtResource("Walk_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_3"]
+atlas = ExtResource("Walk_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_4"]
+atlas = ExtResource("Walk_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_5"]
+atlas = ExtResource("Walk_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_6"]
+atlas = ExtResource("Walk_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_7"]
+atlas = ExtResource("Walk_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_8"]
+atlas = ExtResource("Walk_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Walk_9"]
+atlas = ExtResource("Walk_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_0"]
+atlas = ExtResource("Run_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_1"]
+atlas = ExtResource("Run_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_2"]
+atlas = ExtResource("Run_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_3"]
+atlas = ExtResource("Run_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_4"]
+atlas = ExtResource("Run_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_5"]
+atlas = ExtResource("Run_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_6"]
+atlas = ExtResource("Run_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_7"]
+atlas = ExtResource("Run_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_8"]
+atlas = ExtResource("Run_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Run_9"]
+atlas = ExtResource("Run_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_0"]
+atlas = ExtResource("Jump_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_1"]
+atlas = ExtResource("Jump_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_2"]
+atlas = ExtResource("Jump_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_3"]
+atlas = ExtResource("Jump_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_4"]
+atlas = ExtResource("Jump_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_5"]
+atlas = ExtResource("Jump_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_6"]
+atlas = ExtResource("Jump_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_7"]
+atlas = ExtResource("Jump_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_8"]
+atlas = ExtResource("Jump_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Jump_9"]
+atlas = ExtResource("Jump_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_0"]
+atlas = ExtResource("Attack_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_1"]
+atlas = ExtResource("Attack_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_2"]
+atlas = ExtResource("Attack_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_3"]
+atlas = ExtResource("Attack_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_4"]
+atlas = ExtResource("Attack_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_5"]
+atlas = ExtResource("Attack_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_6"]
+atlas = ExtResource("Attack_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_7"]
+atlas = ExtResource("Attack_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_8"]
+atlas = ExtResource("Attack_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Attack_9"]
+atlas = ExtResource("Attack_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_0"]
+atlas = ExtResource("Hurt_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_1"]
+atlas = ExtResource("Hurt_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_2"]
+atlas = ExtResource("Hurt_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_3"]
+atlas = ExtResource("Hurt_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_4"]
+atlas = ExtResource("Hurt_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_5"]
+atlas = ExtResource("Hurt_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_6"]
+atlas = ExtResource("Hurt_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_7"]
+atlas = ExtResource("Hurt_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_8"]
+atlas = ExtResource("Hurt_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Hurt_9"]
+atlas = ExtResource("Hurt_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_0"]
+atlas = ExtResource("Die_0")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_1"]
+atlas = ExtResource("Die_1")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_2"]
+atlas = ExtResource("Die_2")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_3"]
+atlas = ExtResource("Die_3")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_4"]
+atlas = ExtResource("Die_4")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_5"]
+atlas = ExtResource("Die_5")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_6"]
+atlas = ExtResource("Die_6")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_7"]
+atlas = ExtResource("Die_7")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_8"]
+atlas = ExtResource("Die_8")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="AtlasTexture" id="Frame_Die_9"]
+atlas = ExtResource("Die_9")
+region = Rect2(739, 231, 1089, 617)
+
+[sub_resource type="Animation" id="Animation_Idle"]
+resource_name = "Idle"
+length = 1.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.100, 0.200, 0.300, 0.400, 0.500, 0.600, 0.700, 0.800, 0.900),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Idle_0"), SubResource("Frame_Idle_1"), SubResource("Frame_Idle_2"), SubResource("Frame_Idle_3"), SubResource("Frame_Idle_4"), SubResource("Frame_Idle_5"), SubResource("Frame_Idle_6"), SubResource("Frame_Idle_7"), SubResource("Frame_Idle_8"), SubResource("Frame_Idle_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Walk"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.080, 0.160, 0.240, 0.320, 0.400, 0.480, 0.560, 0.640, 0.720),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Walk_0"), SubResource("Frame_Walk_1"), SubResource("Frame_Walk_2"), SubResource("Frame_Walk_3"), SubResource("Frame_Walk_4"), SubResource("Frame_Walk_5"), SubResource("Frame_Walk_6"), SubResource("Frame_Walk_7"), SubResource("Frame_Walk_8"), SubResource("Frame_Walk_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Run"]
+resource_name = "Run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.060, 0.120, 0.180, 0.240, 0.300, 0.360, 0.420, 0.480, 0.540),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Run_0"), SubResource("Frame_Run_1"), SubResource("Frame_Run_2"), SubResource("Frame_Run_3"), SubResource("Frame_Run_4"), SubResource("Frame_Run_5"), SubResource("Frame_Run_6"), SubResource("Frame_Run_7"), SubResource("Frame_Run_8"), SubResource("Frame_Run_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Jump"]
+resource_name = "Jump"
+length = 0.6
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.060, 0.120, 0.180, 0.240, 0.300, 0.360, 0.420, 0.480, 0.540),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Jump_0"), SubResource("Frame_Jump_1"), SubResource("Frame_Jump_2"), SubResource("Frame_Jump_3"), SubResource("Frame_Jump_4"), SubResource("Frame_Jump_5"), SubResource("Frame_Jump_6"), SubResource("Frame_Jump_7"), SubResource("Frame_Jump_8"), SubResource("Frame_Jump_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Attack"]
+resource_name = "Attack"
+length = 0.3
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.030, 0.060, 0.090, 0.120, 0.150, 0.180, 0.210, 0.240, 0.270),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Attack_0"), SubResource("Frame_Attack_1"), SubResource("Frame_Attack_2"), SubResource("Frame_Attack_3"), SubResource("Frame_Attack_4"), SubResource("Frame_Attack_5"), SubResource("Frame_Attack_6"), SubResource("Frame_Attack_7"), SubResource("Frame_Attack_8"), SubResource("Frame_Attack_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Hurt"]
+resource_name = "Hurt"
+length = 0.4
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.040, 0.080, 0.120, 0.160, 0.200, 0.240, 0.280, 0.320, 0.360),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Hurt_0"), SubResource("Frame_Hurt_1"), SubResource("Frame_Hurt_2"), SubResource("Frame_Hurt_3"), SubResource("Frame_Hurt_4"), SubResource("Frame_Hurt_5"), SubResource("Frame_Hurt_6"), SubResource("Frame_Hurt_7"), SubResource("Frame_Hurt_8"), SubResource("Frame_Hurt_9")]
+}
+
+[sub_resource type="Animation" id="Animation_Die"]
+resource_name = "Die"
+length = 0.8
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 0
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000, 0.080, 0.160, 0.240, 0.320, 0.400, 0.480, 0.560, 0.640, 0.720),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("Frame_Die_0"), SubResource("Frame_Die_1"), SubResource("Frame_Die_2"), SubResource("Frame_Die_3"), SubResource("Frame_Die_4"), SubResource("Frame_Die_5"), SubResource("Frame_Die_6"), SubResource("Frame_Die_7"), SubResource("Frame_Die_8"), SubResource("Frame_Die_9")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avatar"]
+_data = {
+&"Idle": SubResource("Animation_Idle"),
+&"Walk": SubResource("Animation_Walk"),
+&"Run": SubResource("Animation_Run"),
+&"Jump": SubResource("Animation_Jump"),
+&"Attack": SubResource("Animation_Attack"),
+&"Hurt": SubResource("Animation_Hurt"),
+&"Die": SubResource("Animation_Die")
+}
+
+[node name="Avatar" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 2
+scale = Vector2(0.136, 0.136)
+offset = Vector2(283.5, -289.5)
+texture = SubResource("Frame_Idle_0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_avatar")
+}
+autoplay = "Idle"

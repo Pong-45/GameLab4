@@ -7,6 +7,7 @@ func _ready() -> void:
 	$UI.size = get_viewport_rect().size
 	btn_continue.disabled = !GameManager.has_gamesaved()
 	GameManager.load_option()
+	AudioManager.start_music(1, -24)
 
 	pass # Replace with function body.
 
@@ -31,3 +32,7 @@ func _on_btn_credit_pressed() -> void:
 
 func _on_btn_continue_pressed() -> void:
 	GameManager.load_game()
+
+
+func _on_btn_exit_pressed() -> void:
+	get_tree().quit()

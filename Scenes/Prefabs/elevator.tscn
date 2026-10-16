@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/moving_platform.gd" id="1_lbxbt"]
+
+[node name="Elevator" type="AnimatableBody2D" unique_id=1152270893]
+script = ExtResource("1_lbxbt")
+kind = 1
+travel = Vector2(0, -256)

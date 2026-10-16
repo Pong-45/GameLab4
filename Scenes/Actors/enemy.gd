@@ -473,7 +473,7 @@ func die() -> void:
 	if has_node("DeathSfx"):
 		$DeathSfx.play()
 	if GameManager != null:
-		GameManager.add_score()
+		GameManager.add_score(score)
 	died.emit()
 	GameManager.enemy_died(self)
 	await get_tree().create_timer(1.0).timeout

@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/swamp_pickup.gd" id="1_6wadu"]
+
+[node name="GoldCoin" type="Area2D" unique_id=1106524453]
+script = ExtResource("1_6wadu")

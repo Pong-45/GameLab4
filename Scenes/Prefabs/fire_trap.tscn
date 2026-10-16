@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/swamp_hazard.gd" id="1_l2orx"]
+
+[node name="FireTrap" type="Area2D" unique_id=1763619676]
+script = ExtResource("1_l2orx")
+kind = 1
+hazard_size = Vector2(64, 70)

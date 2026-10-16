@@ -16,6 +16,9 @@ var current_level : String = "res://Scenes/Levels/level_01.tscn"
 var save_path := "user://game.save"
 var save_player_position = Vector2.ZERO
 var player_stats = Stat.new()
+var collected: Dictionary = {}
+var saved_buffs: Dictionary = {}
+var saved_checkpoint = Vector2.ZERO
 
 func _ready() -> void:
 	restart()
@@ -36,12 +39,18 @@ func enemy_died(entity : Enemy):
 	player_stats.data_add("killed_"+entity.label)	
 
 func restart():
+	player_stats.data.clear()
+	collected.clear()
+	saved_buffs.clear()
+	saved_checkpoint = Vector2.ZERO
+	current_level = "res://Scenes/Levels/level_01.tscn"
 	player_stats.data_set("hp",100)
 	player_stats.data_set("hp_max",100)
 	player_stats.data_set("life",4)
 	player_stats.data_set("life_max",5)
 	player_stats.data_set("score",0)
 	player_stats.data_set("coins",0)
+	player_stats.data_set("diamonds",0)
 	player_stats.data_set("killed_enemy",0)
 	save_player_position = Vector2.ZERO
 
@@ -64,8 +73,12 @@ func add_life():
 	player_stats.data_add("life",1)
 
 func death():
-	if player != null:
+	# Trap contact can arrive several times while the death animation is playing.
+	if is_instance_valid(player) and player.is_dying:
+		return
+	if is_instance_valid(player):
 		await player.death_tween()
+	player_stats.data_set("hp", player_stats.data_get("hp_max", 100))
 	if player_stats.data_add("life",-1) <= 0:
 		get_tree().change_scene_to_file("res://Scenes/Levels/game_over.tscn")
 
@@ -98,7 +111,10 @@ func save_game():
 		var payload: Dictionary = {
 			"current_level" : current_level,
 			"player" : [pos.x, pos.y],
-			"player_stats" : player_stats.data
+			"player_stats" : player_stats.data,
+			"checkpoint": [player.spawn_point.x, player.spawn_point.y],
+			"collected": collected,
+			"buffs": {"speed": player.speed_time, "jump": player.jump_time}
 		}
 		var json_text = JSON.stringify(payload, "  ")
 		file.store_pascal_string(json_text)
@@ -113,11 +129,20 @@ func load_game():
 		var text = file.get_pascal_string()
 		var data = JSON.parse_string(text)        		
 		file.close()
+		if not data is Dictionary:
+			return
 		current_level = data.get("current_level", current_level)
 		player_stats.data = data.get("player_stats", {})
 		var pos = data.get("player",[0,0])
+		collected = data.get("collected", {})
+		saved_buffs = data.get("buffs", {})
+		var checkpoint = data.get("checkpoint", [0, 0])
+		saved_checkpoint = Vector2(checkpoint[0], checkpoint[1])
 		save_player_position = Vector2(pos[0],pos[1])
 		get_tree().change_scene_to_file(current_level)
 	else:
 		restart()	
 		get_tree().change_scene_to_file("res://Scenes/Levels/level_01.tscn")
+
+func _exit_tree() -> void:
+	player_stats.free()

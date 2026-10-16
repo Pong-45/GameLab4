@@ -1,6 +1,8 @@
 extends Enemy
 
 func _ready() -> void:
+	if not state_changed.is_connected(_on_state_changed):
+		state_changed.connect(_on_state_changed)
 	super._ready()
 	var types = Array($Sprite/AnimateSprite.sprite_frames.get_animation_names())
 	$Sprite/AnimateSprite.animation = types.pick_random()

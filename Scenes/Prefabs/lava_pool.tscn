@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/swamp_hazard.gd" id="1_smq8c"]
+
+[node name="LavaPool" type="Area2D" unique_id=944430496]
+script = ExtResource("1_smq8c")
+kind = 2
+hazard_size = Vector2(192, 64)
