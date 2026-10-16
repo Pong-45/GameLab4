@@ -26,7 +26,7 @@
 
 ## 🕹️ ทดลองเล่นเกม
 
-- [Game Preview](docs/Lab04.html)
+- [Game Preview](https://pong-45.github.io/gamedev2026-project/)
 
 
 ## 👤 ผู้จัดทำ
